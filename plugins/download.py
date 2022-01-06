@@ -62,8 +62,8 @@ LOGGER = logging.getLogger(__name__)
         estimated_total_time = time_formatter(milliseconds=estimated_total_time)
         progress = "○ **Name :** `{}`\n".format(filename)
         progress += "[{0}{1}] \n○ **Percentage :** `{2}%`\n○ **Completed :** ".format(
-            ''.join(["█" for i in range(math.floor(percentage / 5))]),
-            ''.join(["░" for i in range(20 - math.floor(percentage / 5))]),
+            ''.join(["✪" for i in range(math.floor(percentage / 5))]),
+            ''.join(["✯" for i in range(20 - math.floor(percentage / 5))]),
             round(percentage, 1))
 
         tmp = progress + "`{0}` of `{1}`\n○ **Speed :** `{2}/s`\n○ **ETA :** `{3}`\n".format(
@@ -323,7 +323,7 @@ async def pyro_fsub(c, message, fsub):
         if user.status == "kicked":
             await c.send_message(
                 chat_id=message.chat.id,
-                text="Sorry, You are Banned to use me. Contact my [Support Group](https://t.me/harp_chat).",
+                text="Sorry, You are Banned 🚫 to use me. Contact my [Support Group](https://t.me/nexleech).",
                 parse_mode="markdown",
                 disable_web_page_preview=True
             )
@@ -331,11 +331,11 @@ async def pyro_fsub(c, message, fsub):
     except UserNotParticipant:
         await c.send_message(
             chat_id=message.chat.id,
-            text="**Please Join My Updates Channel to Use Me!**",
+            text="**Please Join My🔕 Updates Channel 🔇to Use Me!**",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Join Now", url="https://t.me/harp_tech")
+                        InlineKeyboardButton("Join Now 👉", url="https://t.me/OMG_info")
                     ]
                 ]
             )
@@ -345,7 +345,7 @@ async def pyro_fsub(c, message, fsub):
         print(kk)
         await c.send_message(
             chat_id=message.chat.id,
-            text="Something went Wrong. Contact my [Support Group](https://t.me/harp_chat).",
+            text="Something went Wrong. Contact my [Support Group](https://t.me/nexleech).",
             parse_mode="markdown",
             disable_web_page_preview=True)
         return False
